@@ -47,7 +47,9 @@ One way we can set up a symbolic constant will be to declare a variable and then
 ```
 A better idea, as offered by the C preprocessor, is to use the `#define` directive. PS. The preprocessor also uses the `#include` directive to include information from another file.
 
-When the program is compiled, the constant is substituted everywhere that the definition was used. This is called the *compile-time subsitution*.
+When the program is compiled, the constant is substituted ever
+    scanf("%s", name);
+    printf("%s, how much do you weigh in pounds?\n", name);ywhere that the definition was used. This is called the *compile-time subsitution*.
 These kinds of define constants are termed *manifest constants*.
 
 The general form of defining these constants is:
@@ -67,3 +69,26 @@ This makes the value MONTHS into a read-only value. This way, we can display the
 This also is flexible such that it lets you declare a type, and it controls which parts of the program can use the constant.
 
 There is a third way to declare symbolic constants, and that is by using the `enum` keyword.
+
+
+#### The return value of printf()
+When printf finishes working on printing, it sends back a return value that is used to validate whether the output matches what was intended to come out.
+
+This return value is not used when it comes to printing to screen, it is mostly used when writing the output to a file to check the output errors.
+
+
+#### Using scanf()
+There are two rules to follow when working with scanf()
+- if you use scanf() to read the value of one of the basic data types, precede the variable name with a &
+- if you use scanf() to read a string into a character array, do not use &
+
+    scanf("%s", name);
+    printf("%s, how much do you weigh in pounds?\n", name);
+see `input.c` code
+
+
+#### using the * modifier with printf and scanf
+Using the * modifier in the printf() function and the scanf() function produce two different results.
+Look at the examples, varwid.c and skiptwo.c programs.
+
+For the skiptwo program, the skipping is useful when you have to read data from a file that has the data arranged in uniform columns.

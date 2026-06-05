@@ -38,9 +38,9 @@ CC = gcc
 # -Wall: Basic warnings
 # -Wextra: Extra warnings (highly recommended for C)
 # -Wpedantic: Strict ISO C compliance
-# -std=c99: Use C99 standard
+# -std=c11: Use C11 standard
 # -g: Include debug symbols (essential for GDB)
-CFLAGS = -Wall -Wextra -Wpedantic -std=c99 -g -O2
+CFLAGS = -Wall -Wextra -Wpedantic -std=c11 -g -O2
 
 # --- File Logic ---
 # Usage: make SRC=path/to/file.c
